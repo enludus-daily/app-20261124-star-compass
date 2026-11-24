@@ -7,11 +7,19 @@
       "referenceName": "Pro",
       "price": 480,
       "familySharable": true,
-      "reviewNote": "Pro を買うと、すべての〇〇と詳しい振り返りが使えます。課金の画面は設定 > Pro から開けます。",
+      "reviewNote": "Pro を買うと、自由練習が無制限になり、過去 30 日の問題・難しい空・追加の 16 都市・大陸ごとの記録が使えます。課金の画面は、ホームの「難しい空」「過去の問題」、または設定 > Pro を見る から開けます。",
       "reviewScreenshot": "docs/iap/paywall.png",
       "localizations": [
-        {"locale": "ja", "name": "Pro", "description": "すべての〇〇と詳しい振り返り"},
-        {"locale": "en-US", "name": "Pro", "description": "All 〇〇 and detailed reviews"}
+        {
+          "locale": "ja",
+          "name": "天文台の Pro",
+          "description": "練習を無制限・過去の空・難しい空・追加の都市"
+        },
+        {
+          "locale": "en-US",
+          "name": "Observatory Pro",
+          "description": "Unlimited practice, past & hard skies, more cities"
+        }
       ]
     }
   ]

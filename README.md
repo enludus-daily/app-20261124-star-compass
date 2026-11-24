@@ -1,36 +1,78 @@
-# daily-app-template
+# ほしよみ天文台：夜空で場所当て / Star Compass: Sky GeoGuess
 
-enludus-daily で毎日作る iOS アプリ（SwiftUI）のテンプレート。テンプレートから作ったリポジトリでは、この README をそのアプリの説明に書き換える。
+**映った夜空から、地球の「どこの・何月の」空かを当てる。毎日 5 問、世界のみんなと同じ空。**
+星空観察 × 場所当てゲーム（エンタメ × エンタメ）。enludus-daily の 2026-11-24 のアプリ（[daily-ideas#50](https://github.com/enludus-daily/daily-ideas/issues/50)、監督の指示 #49・昼の企画）。
 
-## 中身
+## だれの・どう使うか
+- 星座は好きだが「見上げても何も読めない」人、場所当てゲームを毎日遊ぶ人が、寝る前の 5 分に使う。
+- 1 問：ある都市・ある月の **夜 10 時ごろ（21:30〜22:30）の全天** が出る。向きは問題ごとに回してあり、指で回せる。
+- 真鍮の **グリニッジの時計** がいつも出ている（その土地は夜 10 時ごろなので、時計との差 × 15° が経度）。
+- 「答えを置く」→ 地球儀を回して触れた所にピン → 月を 12 の目盛りから選ぶ → 答える。
+- 答えのあと：正解（金の星）と自分のピンを大圏の弧で結び、距離と点を出す。**この空の読み方** の札を 1 枚見せる（初めてなら集まる）。
+- 5 問終わると夜明けの色で合計・称号・月の満ち欠けの格子。共有は点と月の形だけ（場所は書かない）。
 
-| パス | 役割 |
+## 決まり（数字）とテスト
+| | 決まり | テスト（`Tests/StarCompassTests.swift`） |
+|---|---|---|
+| 星 | 明るい星 338 個（J2000 の赤経・赤緯・等級。公的な星表の値を丸めて手で入れた）、星座の線 46 | `catalogHasManyBrightStars`・`everyConstellationLineHasBothStars` |
+| 空の計算 | 恒星時（Meeus の式）→ 高度・方位 → 天頂を中心に地平線を半径 1 | `polarisHeightMatchesLatitude`（±1°）・`southernCrossNeverRisesAt35North`・`orionIsHighOnJanuaryNightsInTokyo` ほか |
+| 都市 | 66 か所（無料の練習は 50、Pro で南米・アフリカ・極地の 16 を足す。毎日の問題は全部から） | `citiesSplitIntoFreeAndPro` |
+| 毎日の 5 問 | 日付の種（FNV-1a → SplitMix64）。南半球 1 問以上・北半球 2 問以上・同じ都市なし | `sameDaySameSkies`・`dailyMixesHemispheres` |
+| 点 | 場所 4,000 × exp(−(距離/2,024km)^1.44)（500km で 3,500、2,000km で 1,500）＋季節 1,000（月のずれ 0→1,000、1→667、2→333） | `distanceCurve`・`monthsWrapAround` |
+| ヒント | 星座の線・方角・天の川。1 つで満点の 20% を引く | `threeHintsCapTheScore` |
+
+### うれしい・怖いを数字で（review.md「遊びの核の緊張を数字で確かめる」）
+| | 決まり | テスト |
+|---|---|---|
+| うれしい | 読み方を覚えるほど当たる距離が縮む | `polarisAloneFindsTheLatitude`：北極星の高さだけ（目で読むずれ ±5°）で、北半球の問題の緯度 ±10° に入る割合 8 割以上 |
+| 惜しい | 距離で点が急に減る | `readingTheSkyBeatsGuessing`：真ん中（緯度 20°・経度 0°・6 月）を答えると平均 1,000 点以下、読み方を全部使うと 3,500 以上、3 倍以上の差（手元の試算：452 点 / 4,595 点） |
+| 怖い | ヒントで満点が減る | `threeHintsCapTheScore`：3 つで満点 2,000 |
+| 運にしない | 経度は時計を読まないと当たらない | `longitudeNeedsTheClock`：緯度と月が完璧でも経度 0° と答えると平均 2,500 点未満 |
+
+## 世界観と見た目
+**真鍮の天文台**。「このアプリでは〔観測所の真鍮の器械〕が〔問題の画面〕になり、〔天球〕が空の円、〔地球儀と目盛りの定規〕が答えになる」。
+- 天球・星・天の川・地球儀（陸を打った真鍮の点。手で書いた海岸線から作る）・24 時間の時計は、すべて `Canvas` で描く（画像なし）。
+- 色：深い紫紺の夜（`#1A1433`・`#0D0A1C`）× 真鍮の金（`#C9A15B`・`#EED9A4`）。答えのあとは夜明け（`#3B2A5C`→`#B0607A`→`#F2B48C`）。正解は金 `#FFCF6E`、自分の答えは青 `#9FD3FF`。
+- 書体：見出しは細いセリフ、数字は真鍮の刻印のようなセリフの等幅数字。
+- 星は等級で大きさと明るさを変え、赤い星（ベテルギウス・アンタレス）と青白い星（シリウス・リゲル）に色を付け、`TimelineView` でゆっくりまたたく（撮影・動きを減らす設定では止める）。
+- 11/23 夜の水族館（青緑の水・丸い書体）、11/20 夜の島、11/22 昼の畑、11/13 あさやけ図鑑とは、色の系統（紫紺 × 真鍮）・書体（セリフ）・主役の部品（天球・地球儀・時計）で分ける。
+- 大きな画面（size class regular：Duo の内側）では、空と地球儀を左右に並べ、ヒント・答えるを下に固定する（撮影の `wide`）。
+
+## 手応えの表
+| できごと | 動き | 振動 | 音（端末で合成） |
+|---|---|---|---|
+| 押す | 真鍮のボタンが 0.95 倍に沈む | selection | 歯車のカチ 0.25 |
+| ピンを刺す | ピンが跳ねて刺さる（spring 0.35/0.55） | rigid 0.6 | 金属のチン 0.4 |
+| 答える（近い・2,500 点以上） | 弧が 1.1 秒で伸び、点が数え上がる | success | 鈴が上がる 0.7 |
+| 答える（遠い） | 同じ動きで点は小さく | soft 0.4 | 低い 2 音 0.5 |
+| 新しい読み方の札 | 札の縁が金に光り「新しい札」 | heavy 0.8 | 鈴の 5 音 0.8 |
+| 5 問を終える | 夜明けの色に切り替わり、合計が 1.4 秒で数え上がる | success | 4 音 0.8 |
+
+## 毎日開く理由
+1. **今日の 5 問**（全員同じ。0 時に新しくなる）と連続日数。
+2. **読み方の札 12 枚**（北極星・南十字・天の南極・カノープス・沈まない北斗七星・天頂の星・時計と経度・季節の星座 5 つ）を集める。
+3. **月の満ち欠けの共有**（🌕🌔🌓🌒🌑。場所は書かない）。
+4. 記録：最近 10 問の平均距離と、その前の 10 問からどれだけ縮んだか。
+
+## 課金
+| 項目 | 内容 |
 |---|---|
-| `project.yml` | XcodeGen の spec。`.xcodeproj` はコミットしない |
-| `App/Sources/`, `Tests/` | ひな形のアプリとテスト（Swift Testing） |
-| `App/Resources/` | アイコン、アクセントカラー、`PrivacyInfo.xcprivacy` |
-| `.github/workflows/ci.yml` | push / PR で daily-actions の `ios-ci.yml` を呼ぶ（40 桁の SHA で固定） |
-| `.github/workflows/testflight.yml` | 手動（workflow_dispatch）で `ios-testflight.yml` を呼ぶ（アップロードのあと内部テストに配信） |
-| `.github/workflows/asc.yml` | 手動で `ios-asc.yml` を呼ぶ（App Store Connect に名前・説明などを入れる / 最新ビルドを配信） |
-| `docs/app-store.json`, `PRIVACY.md` | App Store Connect に入れる情報、プライバシーポリシー |
-| `scripts/pin-daily-actions.sh` | daily-actions の SHA を書き換える（整備用のセッションか本人だけ。自己 CI の成功を確かめる） |
-| `scripts/new-app.sh` | 名前・表示名・枠（Bundle ID）に書き換える |
-| `scripts/preflight-push.sh`, `.githooks/pre-push` | push の前の検査（秘密・個人情報）と1日の上限 |
-| `scripts/scan-sensitive.sh` | 検査の複製（正本は daily-actions/scan/。違うと CI が警告） |
-| `scripts/make-icon.py` | アイコンを作る（Pillow） |
-| `.claude/skills/` | dev-lifecycle / dev-judgment / dev-workflow（naki0227/useful-map から取得） |
-| `CLAUDE.md`, `docs/daily-runbook.md` | 毎日のセッションの決まりと手順 |
-| `docs/app-store.md` | 審査の危険・本人がすることの記録 |
+| 形と値段 | 買い切り Pro **¥480**（非消耗型 `com.enludus.daily.017.pro`、ファミリー共有あり） |
+| 払う理由 3 つ | ①自由練習を無制限（無料は 1 日 3 回。読み方を覚える途中でもっと解きたくなる）②過去 30 日の空（見逃した日の 5 問）③難しい空（街あかりで 3 等より暗い星が消え、星座の線なし）＋南米・アフリカ・極地の 16 都市＋大陸ごとの平均距離 |
+| 無料の範囲 | 毎日の 5 問・ヒント・読み方の札・共有・連続日数・記録。広告なし |
+| 比べたアプリ | Sky Guide（星図・AR。サブスク）／Star Rover（世界の空の星図。買い切り）／Stellar Guesser（Web・無料。星の座標当て）／Star Map Guide（星座を置くミニゲーム）。どれも「夜空から場所と季節を当てる毎日の問題」はない |
+| 値段の位置 | 場所当てゲームの有料版は月額が多い。毎日の問題は無料のまま、練習と過去の問題だけを一度の ¥480 で開ける（缶コーヒー 3 本） |
+| 売上の幅 | 月 300 / 1,000 / 3,000 インストール × 2%（フリーミアムの中央値、RevenueCat 2026）× ¥480 × 0.85 ≒ **¥2,400 / ¥8,200 / ¥24,500** |
+| 弱点と対策 | 毎日の 5 問だけで満足される → 練習の残りが 0 のとき・初めての 5 問の直後に 1 回だけ案内し、記録で「大陸ごとの苦手」が見えるところに鍵を置く |
+| 出す場面 | はじめて毎日の 5 問を終えて天文台に戻った直後に 1 回だけ。ほかは練習の残りが 0・難しい空・過去の空・設定から |
 
-## 手元（Mac）で開く
+## 作らなかったもの
+AR・カメラ・位置情報（自分の場所は要らない）、ネットの星表、ランキングのサーバー・ログイン、Apple Intelligence、月や惑星（日によって位置が大きく変わり、季節の読み方を乱すため）。
 
-```sh
-brew install xcodegen   # CI は 2.46.0 で固定
-xcodegen generate
-open DailyApp.xcodeproj
-```
+## デモで見せる流れ（起動引数 `-demo`、約 18 秒）
+1. 天文台 → 今日の空（パリの 1 月の夜）が開き、星座の線を出して空を回す。
+2. 地球儀を回してフランスのあたりにピン、1 月を選んで答える → 金の弧と点、新しい札「北極星の高さは緯度」。
+3. 夜明けの色で 5 問の合計と月の満ち欠け。
 
-## 版
-
-- Xcode 27.1（ランナー `xcode-27`。GitHub では Preview 扱い）、iOS 18.0 以降、iPhone だけ（iPhone Duo の内側の画面にも合わせる）、Swift 6
-- スキルの取得元：`naki0227/personal-knowledge`（Vault、private）の `templates/repo-bootstrap/.claude/skills/` を、本人の整備用セッションで写す（2026-11-05 に app-quality-bar を追加）
+## 撮影の場面（`-screenshotScene <名前>`、`_ja` で日本語）
+`onboarding` `onboarding2` `onboarding3` `home` `sky` `hints` `answer` `result` `result2`（南半球） `summary` `lore` `stats` `statsPro` `empty` `settings` `paywall` `archive` `hard` `wide`（size class regular の 2 列）

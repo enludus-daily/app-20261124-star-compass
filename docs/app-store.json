@@ -1,21 +1,21 @@
 {
   "_doc": "App Store Connect に API で入れる情報（.github/workflows/asc.yml の metadata が読む）。文字数：name・subtitle 30、keywords 100（カンマ区切り）、promotionalText 170、description 4000。カテゴリの ID は EDUCATION・PRODUCTIVITY・UTILITIES・LIFESTYLE・HEALTH_AND_FITNESS など。審査への提出と App プライバシーの申告は本人が行う。",
   "locale": "ja",
-  "name": "",
-  "subtitle": "",
-  "primaryCategory": "",
-  "secondaryCategory": "",
+  "name": "ほしよみ天文台：夜空で場所当て",
+  "subtitle": "星を読んで、地球のどこかを当てる",
+  "primaryCategory": "GAMES",
+  "secondaryCategory": "EDUCATION",
   "supportUrl": "https://github.com/enludus-daily/app-20261124-star-compass/issues",
   "privacyPolicyUrl": "https://github.com/enludus-daily/app-20261124-star-compass/blob/main/PRIVACY.md",
-  "keywords": "",
-  "promotionalText": "",
-  "description": "",
-  "whatToTest": "",
+  "keywords": "星座,星空,天体観測,天文,北極星,南十字,場所当て,地理,クイズ,パズル,毎日,地球儀,夜空,星",
+  "promotionalText": "毎日 5 つ、世界のどこかの夜空が届く。北極星の高さ、南十字、真鍮の時計――星を読んで、場所と月を当てよう。",
+  "description": "映った夜空から、地球の「どこの・何月の」空かを当てる、毎日の場所当てゲーム。\n\n■ 遊び方\n・地球のどこかの都市の、ある月の夜 10 時ごろの全天が出ます。指で回して眺めましょう。\n・地球儀を回して、その空を見た場所に触れてピンを刺し、何月の空かを選びます。\n・近いほど高得点（1 問 5,000 点）。答えのあとは、正解とあなたの答えが金の弧で結ばれます。\n\n■ 星を読めば、当たるようになる\n・北極星の高さは、その土地の緯度。\n・南十字が見えたら南の国。\n・南北の線にある星座で月が分かる（オリオンは 12〜2 月、さそり座は 6〜8 月）。\n・真鍮のグリニッジの時計との差は経度。\n答えるたびに「この空の読み方」の札が 1 枚ずつ集まり、当たる距離が縮んでいきます。\n\n■ 毎日 5 問・みんな同じ空\n・0 時に新しい 5 問。連続日数がたまります。\n・結果は月の満ち欠け（🌕🌔🌓🌒🌑）で共有。場所は書かないので、友だちのネタばれになりません。\n・ヒント（星座の線・方角・天の川）は使うほど満点が下がります。\n\n■ 真鍮の天文台\n紫紺の夜と真鍮の器械。明るい星 338 個と星座 46 個、都市 66 か所を端末の中に持っています。位置情報もネットも使いません。\n\n■ Pro（買い切り）\n・自由練習を無制限（無料は 1 日 3 回）\n・過去 30 日の空\n・難しい空（街あかりで暗い星が消え、星座の線なし）\n・南米・アフリカ・極地の 16 都市\n・大陸ごとの平均距離の記録\n毎日の 5 問・ヒント・読み方の札・共有はずっと無料です。広告はありません。",
+  "whatToTest": "ホームの「今日の 5 問をはじめる」→ 空を見る（指で回す・ヒント）→「答えを置く」→ 地球儀を回して触れる → 月を選ぶ →「答える」。5 問終えると夜明けのまとめと共有。天文台に戻ると Pro の案内が 1 回出ます（購入と復元を確かめてください）。練習・読み方の札・記録・設定もホームから。",
   "en-US": {
-    "name": "",
-    "subtitle": "",
-    "keywords": "",
-    "promotionalText": "",
-    "description": ""
+    "name": "Star Compass: Sky GeoGuess",
+    "subtitle": "Read the stars, find the place",
+    "keywords": "astronomy,constellation,stargazing,geography,guess,geo,daily puzzle,night sky,polaris,globe,quiz",
+    "promotionalText": "Five night skies a day, from somewhere on Earth. Read Polaris, the Southern Cross and a brass Greenwich clock to guess where and when.",
+    "description": "A daily geography game played with the night sky: guess where on Earth, and in which month, a sky was seen.\n\nHOW TO PLAY\n• You see the whole sky at about 10 p.m. local time, somewhere on Earth. Drag to turn it.\n• Spin the brass globe, tap to drop your pin, and pick the month.\n• The closer you are, the more you score (5,000 per sky). A golden arc links your pin to the answer.\n\nLEARN TO READ THE SKY\n• Polaris's height is your latitude.\n• See the Southern Cross? You're far south.\n• What sits on the meridian tells the month (Orion: Dec–Feb, Scorpius: Jun–Aug).\n• The gap from the Greenwich clock gives longitude.\nAfter every answer you collect a lore card for that sky — and your distances shrink.\n\nFIVE SKIES A DAY, THE SAME FOR EVERYONE\n• New skies at midnight. Keep your streak.\n• Share your result as moon phases (🌕🌔🌓🌒🌑) — no spoilers.\n• Hints (lines, compass, Milky Way) lower your maximum score.\n\nA BRASS OBSERVATORY\nIndigo night and brass instruments. 338 bright stars, 46 constellations and 66 cities live on your device. No location access, no network.\n\nPRO (ONE-TIME PURCHASE)\n• Unlimited practice (free: 3 a day)\n• The last 30 days of daily skies\n• Hard skies: city glow hides faint stars, no lines\n• 16 more cities in South America, Africa and the poles\n• Average distance by continent\nDaily skies, hints, lore cards and sharing stay free. No ads."
   }
 }
