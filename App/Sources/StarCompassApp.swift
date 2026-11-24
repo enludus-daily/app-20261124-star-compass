@@ -102,6 +102,12 @@ enum Launch {
             let model = AppModel(persists: false, now: stageDate())
             model.soundOn = false
             model.still = true
+            if ProcessInfo.processInfo.arguments.contains("-uiTestThreeDone") {
+                let key = model.todayKey
+                model.progress.days[key] = Puzzle.daily(key).prefix(3).map {
+                    Answer(question: $0, guessLat: $0.city.lat + 4, guessLon: $0.city.lon - 6, guessMonth: $0.month, hints: [])
+                }
+            }
             return model
         }
         guard isDemo || scene != nil else { return AppModel() }

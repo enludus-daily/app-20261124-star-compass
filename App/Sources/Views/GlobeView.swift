@@ -182,7 +182,7 @@ struct MonthDial: View {
                     .buttonStyle(.plain)
                     .disabled(onPick == nil)
                     .accessibilityLabel(Lore.monthName(m))
-                    .accessibilityIdentifier("main.month\(m)")
+                    .accessibilityIdentifier("month.\(m)")
                 }
             }
             if !Lang.isJapanese, let selected {

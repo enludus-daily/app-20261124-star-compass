@@ -249,7 +249,7 @@ struct PlayView: View {
                 }
                 .buttonStyle(.plain)
                 .disabled(locked)
-                .accessibilityIdentifier("main.hint.\(h.rawValue)")
+                .accessibilityIdentifier("hint.\(h.rawValue)")
             }
         }
     }

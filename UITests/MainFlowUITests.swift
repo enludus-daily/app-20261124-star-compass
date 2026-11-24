@@ -8,60 +8,35 @@ import XCTest
 /// その日のアプリの主な流れ。
 enum MainFlow {
     /// 起動引数（見本のデータで開くなど。保存されたデータを壊さないもの）
-    static let launchArguments: [String] = ["-uiTestFresh"]
+    /// 起動引数（見本のデータで開くなど。保存されたデータを壊さないもの）。
+    /// -uiTestThreeDone：今日の 5 問のうち 3 問を答えた状態で始める（全部の問をたどると UI テストが 40 分の上限を超えるため）
+    static let launchArguments: [String] = ["-uiTestFresh", "-uiTestThreeDone"]
 
     /// 1 操作ずつ。各操作のあとに撮る。
-    /// 案内 3 ページ → 今日の 5 問 → 星座の線 → （答えを置く → 地球儀に触れる → 月 → 答える → 次へ）× 5 → 夜明けのまとめ →
-    /// 天文台へ（はじめての完了で Pro の案内が 1 回だけ出る）→ 閉じる → 読み方の札 → 記録 → 設定 → 練習を 1 問
+    /// 案内 3 ページ → 続きから（3/5）→ 星座の線 →（答えを置く → 地球儀に触れる → 月 → 答える → 次へ）× 2 → 夜明けのまとめ →
+    /// 天文台へ（はじめての完了で Pro の案内が 1 回だけ出る）→ 閉じる → 読み方の札 → 閉じる → 記録 → 閉じる
     static let steps: [Step] = [
         .tap("main.onboardNext"),
         .tap("main.onboardNext"),
         .tap("main.onboardStart"),
-        .wait(1.0),
         .tap("main.daily"),
-        .tap("main.hint.lines"),
+        .tap("hint.lines"),
         .tap("main.toAnswer"),
         .tap("main.globe"),
-        .tap("main.month1"),
+        .tap("month.1"),
         .tap("main.submit"),
         .tap("main.next"),
         .tap("main.toAnswer"),
         .tap("main.globe"),
-        .tap("main.month4"),
+        .tap("month.7"),
         .tap("main.submit"),
         .tap("main.next"),
-        .tap("main.toAnswer"),
-        .tap("main.globe"),
-        .tap("main.month7"),
-        .tap("main.submit"),
-        .tap("main.next"),
-        .tap("main.toAnswer"),
-        .tap("main.globe"),
-        .tap("main.month10"),
-        .tap("main.submit"),
-        .tap("main.next"),
-        .tap("main.toAnswer"),
-        .tap("main.globe"),
-        .tap("main.month12"),
-        .tap("main.submit"),
-        .tap("main.next"),
-        .wait(1.0),
         .tap("main.home"),
-        .wait(1.0),
         .tap("main.close"),
         .tap("main.lore"),
         .tap("main.close"),
         .tap("main.stats"),
         .tap("main.close"),
-        .tap("main.settings"),
-        .tap("main.close"),
-        .tap("main.practice"),
-        .tap("main.hint.compass"),
-        .tap("main.toAnswer"),
-        .tap("main.globe"),
-        .tap("main.month6"),
-        .tap("main.submit"),
-        .wait(1.0),
     ]
 }
 
