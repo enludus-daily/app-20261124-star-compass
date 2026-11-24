@@ -22,7 +22,7 @@ struct PlayView: View {
                     .padding(.horizontal, Space.m)
                     .padding(.top, Space.s)
                     .padding(.bottom, Space.s)
-                    .background(Ink.nightDeep.opacity(s.panel == .summary ? 0 : 0.85).ignoresSafeArea().allowsHitTesting(false))
+                    .background((s.panel == .summary ? Ink.dawnLow.opacity(0.92) : Ink.nightDeep.opacity(0.85)).ignoresSafeArea().allowsHitTesting(false))
             }
         }
     }
@@ -400,7 +400,7 @@ struct SummaryView: View {
                 .brassPlate(fill: Ink.nightDeep.opacity(0.78))
                 if case .daily = session.mode {
                     HStack(spacing: Space.l) {
-                        badge(tr("連続", "Streak"), trf("%d 日", "%d days", model.streak))
+                        badge(tr("連続", "Streak"), dayCount(model.streak))
                         badge(tr("読み方の札", "Lore cards"), "\(model.progress.lore.count)/\(Lore.allCases.count)")
                         badge(tr("最高", "Best"), model.progress.bestDaily.formatted())
                     }

@@ -91,7 +91,7 @@ struct HomeView: View {
                 }
                 Spacer()
                 VStack(alignment: .trailing, spacing: 0) {
-                    Text(trf("%d 日", "%d days", model.streak)).font(Face.engraved(20)).foregroundStyle(Ink.brassLight)
+                    Text(dayCount(model.streak)).font(Face.engraved(20)).foregroundStyle(Ink.brassLight)
                     Text(tr("連続", "Streak")).font(Face.label(11)).foregroundStyle(Ink.mist)
                 }
             }

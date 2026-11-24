@@ -26,3 +26,8 @@ func tr(_ ja: String, _ en: String) -> String {
 func trf(_ ja: String, _ en: String, _ args: CVarArg...) -> String {
     String(format: tr(ja, en), locale: Lang.locale, arguments: args)
 }
+
+/// 日数（英語は 1 day / 2 days）
+func dayCount(_ n: Int) -> String {
+    Lang.isJapanese ? "\(n) 日" : (n == 1 ? "1 day" : "\(n) days")
+}

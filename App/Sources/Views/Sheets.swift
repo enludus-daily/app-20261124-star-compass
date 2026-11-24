@@ -104,7 +104,7 @@ struct StatsSheet: View {
                 } else {
                     HStack(spacing: Space.s) {
                         big(tr("最高（毎日）", "Best day"), p.bestDaily.formatted())
-                        big(tr("連続", "Streak"), trf("%d 日", "%d days", model.streak))
+                        big(tr("連続", "Streak"), dayCount(model.streak))
                         big(tr("答えた空", "Skies"), "\(p.samples.count)")
                     }
                     if let t = p.trend() {

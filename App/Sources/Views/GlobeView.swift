@@ -94,7 +94,7 @@ struct GlobeView: View {
         ctx.stroke(grid, with: .color(Ink.brass.opacity(0.22)), lineWidth: 0.6)
 
         // 陸（真鍮の点。縁ほど暗く）
-        let dot = max(1.1, R * 0.021)
+        let dot = max(0.9, R * 0.0145)
         for d in Land.cached {
             guard let p = Earth.ortho(lat: d.lat, lon: d.lon, lat0: center.lat, lon0: center.lon) else { continue }
             let depth = sqrt(max(0, 1 - p.x * p.x - p.y * p.y))
