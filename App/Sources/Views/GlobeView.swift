@@ -11,6 +11,8 @@ struct GlobeView: View {
     var interactive = true
     var onTurn: ((GeoPoint) -> Void)?
     var onPin: ((GeoPoint) -> Void)?
+    /// 答えを置く地球儀だけを主な部品（main.globe）にする
+    var axID = "main.globe"
 
     @State private var dragStart: GeoPoint?
 
@@ -26,7 +28,7 @@ struct GlobeView: View {
         .aspectRatio(1, contentMode: .fit)
         .accessibilityElement()
         .accessibilityLabel(tr("地球儀。回して、触れた所に答えのピンを刺す", "Globe. Spin it and tap to drop your pin."))
-        .accessibilityIdentifier("main.globe")
+        .accessibilityIdentifier(axID)
     }
 
     private func globeGesture(side: CGFloat) -> some Gesture {

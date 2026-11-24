@@ -190,7 +190,7 @@ struct OnboardingView: View {
                     case 1:
                         SkyDomeView(question: Self.demoSouth, hints: [.compass], highlight: ["Cru", "Sco"], still: true, interactive: false)
                     default:
-                        GlobeView(center: GeoPoint(lat: 10, lon: 140), pin: GeoPoint(lat: -30, lon: 145), truth: GeoPoint(lat: -33.87, lon: 151.21), interactive: false)
+                        GlobeView(center: GeoPoint(lat: 10, lon: 140), pin: GeoPoint(lat: -30, lon: 145), truth: GeoPoint(lat: -33.87, lon: 151.21), interactive: false, axID: "onboard.globe")
                     }
                 }
                 .frame(maxWidth: 300, maxHeight: 300)

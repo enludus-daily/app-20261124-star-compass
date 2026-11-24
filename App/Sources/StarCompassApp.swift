@@ -23,10 +23,15 @@ struct RootView: View {
             if !model.onboarded {
                 OnboardingView().transition(.opacity)
             } else if model.session != nil {
-                PlayView().transition(.opacity)
+                // シートを開いている間は、下の画面の部品を読み上げ・UI テストから外す
+                PlayView().accessibilityHidden(model.activeSheet != nil).transition(.opacity)
             } else {
-                HomeView().transition(.opacity)
+                HomeView().accessibilityHidden(model.activeSheet != nil).transition(.opacity)
             }
+        }
+        // 撮影と UI テストでは動きを止める（消えていく途中の部品を拾わない）
+        .transaction { t in
+            if model.still { t.disablesAnimations = true; t.animation = nil }
         }
         .environment(model)
         .modifier(WideOverride(on: Launch.scene == "wide"))

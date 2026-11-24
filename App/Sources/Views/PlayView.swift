@@ -266,7 +266,7 @@ struct ResultPanel: View {
                 VStack(spacing: Space.m) {
                     TimelineView(.animation(minimumInterval: 1.0 / 30, paused: model.still)) { tl in
                         let t = model.still ? 1 : min(1, tl.date.timeIntervalSince(model.revealAt) / 1.1)
-                        GlobeView(center: session.globe, pin: GeoPoint(lat: a.guessLat, lon: a.guessLon), truth: GeoPoint(lat: a.question.city.lat, lon: a.question.city.lon), arc: t, interactive: true, onTurn: { model.turnGlobe(lat: $0.lat, lon: $0.lon) })
+                        GlobeView(center: session.globe, pin: GeoPoint(lat: a.guessLat, lon: a.guessLon), truth: GeoPoint(lat: a.question.city.lat, lon: a.question.city.lon), arc: t, interactive: true, onTurn: { model.turnGlobe(lat: $0.lat, lon: $0.lon) }, axID: "result.globe")
                             .frame(maxHeight: 250)
                     }
                     scorePlate(a)
