@@ -172,16 +172,17 @@ enum Launch {
             Session(mode: mode, key: key, questions: qs)
         }
         let today = Puzzle.daily(key)
+        let rest = Array(today.prefix(4))
         switch scene {
         case "home", "wideHome": break
         case "sky", "hints", "wide", "hard":
-            var s = session(scene == "hard" ? [stageQuestion("santiago", month: 4)] + today : [stageQuestion("madrid", month: 1)] + today)
+            var s = session(scene == "hard" ? [stageQuestion("santiago", month: 4)] + rest : [stageQuestion("madrid", month: 1)] + rest)
             if scene == "hard" { s.mode = .hard; model.proOverride = true }
             if scene == "hints" { s.hints = [.lines, .compass, .milkyWay] }
             if scene == "wide" { s.pin = GeoPoint(lat: 44, lon: -2); s.month = 2; s.globe = GeoPoint(lat: 35, lon: 0) }
             model.session = s
         case "answer":
-            var s = session([stageQuestion("madrid", month: 1)] + today)
+            var s = session([stageQuestion("madrid", month: 1)] + rest)
             s.panel = .answer
             s.globe = GeoPoint(lat: 35, lon: 5)
             s.pin = GeoPoint(lat: 43.5, lon: -1.5)
@@ -189,7 +190,7 @@ enum Launch {
             model.session = s
         case "result", "result2":
             let q = scene == "result" ? stageQuestion("madrid", month: 1) : stageQuestion("sydney", month: 7, rotation: 200)
-            var s = session([q] + today)
+            var s = session([q] + rest)
             if scene == "result2" { s.answers = [Answer(question: today[0], guessLat: today[0].city.lat + 3, guessLon: today[0].city.lon - 4, guessMonth: today[0].month, hints: [])]; s.questions = [today[0], q] + Array(today.dropFirst().prefix(3)); s.index = 1 }
             s.panel = .answer
             s.pin = scene == "result" ? GeoPoint(lat: 44.2, lon: -1.6) : GeoPoint(lat: -27.5, lon: 153)
