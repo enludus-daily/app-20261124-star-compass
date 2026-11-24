@@ -117,8 +117,8 @@ enum Launch {
     }
 
     /// 見本の記録（使って 1 週間くらい）：6 日続けて遊び、札 6 枚
-    static func sampleProgress(now: Date) -> Progress {
-        var p = Progress()
+    static func sampleProgress(now: Date) -> Logbook {
+        var p = Logbook()
         var rng = SeededRNG(seed: 24)
         let cal = Calendar.current
         for back in 1...6 {

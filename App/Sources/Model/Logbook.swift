@@ -1,7 +1,7 @@
 import Foundation
 
 /// 端末の中だけに残る記録（UserDefaults に JSON で 1 つ）
-struct Progress: Codable, Equatable, Sendable {
+struct Logbook: Codable, Equatable, Sendable {
     /// 毎日の問題の答え（日付の鍵 → 答えた順）
     var days: [String: [Answer]] = [:]
     /// 過去の問題（Pro）の合計
@@ -29,7 +29,7 @@ struct Progress: Codable, Equatable, Sendable {
     func total(_ key: String) -> Int { days[key]?.reduce(0) { $0 + $1.score } ?? 0 }
 
     func practiceLeft(today: String) -> Int {
-        practiceDay == today ? max(0, Progress.freePractice - practiceUsed) : Progress.freePractice
+        practiceDay == today ? max(0, Logbook.freePractice - practiceUsed) : Logbook.freePractice
     }
 
     mutating func usePractice(today: String) {

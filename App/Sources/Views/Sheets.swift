@@ -158,7 +158,7 @@ struct StatsSheet: View {
         .brassPlate()
     }
 
-    private func continents(_ p: Progress) -> some View {
+    private func continents(_ p: Logbook) -> some View {
         VStack(alignment: .leading, spacing: Space.s) {
             HStack {
                 Text(tr("大陸ごとの平均距離", "Average distance by continent")).font(Face.heading(16)).foregroundStyle(Ink.ivory)

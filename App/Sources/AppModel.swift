@@ -42,7 +42,7 @@ struct Session: Equatable {
 @MainActor
 @Observable
 final class AppModel {
-    var progress = Progress()
+    var progress = Logbook()
     var onboarded: Bool
     var onboardingPage = 0
     var session: Session?
@@ -82,7 +82,7 @@ final class AppModel {
             onboarded = defaults.bool(forKey: "onboarded")
             soundOn = defaults.object(forKey: "sound") as? Bool ?? true
             hapticsOn = defaults.object(forKey: "haptics") as? Bool ?? true
-            if let data = defaults.data(forKey: "progress"), let p = try? JSONDecoder().decode(Progress.self, from: data) {
+            if let data = defaults.data(forKey: "progress"), let p = try? JSONDecoder().decode(Logbook.self, from: data) {
                 progress = p
             }
         } else {
@@ -288,7 +288,7 @@ final class AppModel {
 
     func shareText() -> String {
         guard let s = session else { return "" }
-        return Progress.shareText(key: s.key, answers: s.answers, streak: streak)
+        return Logbook.shareText(key: s.key, answers: s.answers, streak: streak)
     }
 
     // MARK: - 課金

@@ -20,7 +20,7 @@ struct GlobeView: View {
             Canvas { ctx, size in draw(&ctx, size: size) }
                 .frame(width: side, height: side)
                 .contentShape(Circle())
-                .gesture(interactive ? gesture(side: side) : nil)
+                .gesture(interactive ? globeGesture(side: side) : nil)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .aspectRatio(1, contentMode: .fit)
@@ -29,7 +29,7 @@ struct GlobeView: View {
         .accessibilityIdentifier("main.globe")
     }
 
-    private func gesture(side: CGFloat) -> some Gesture {
+    private func globeGesture(side: CGFloat) -> some Gesture {
         DragGesture(minimumDistance: 0)
             .onChanged { v in
                 let moved = hypot(v.translation.width, v.translation.height)

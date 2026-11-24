@@ -94,5 +94,5 @@ enum Land {
     }
 
     /// 一度だけ作る
-    @MainActor static let cached: [(lat: Double, lon: Double)] = dots()
+    static let cached: [(lat: Double, lon: Double)] = dots()
 }

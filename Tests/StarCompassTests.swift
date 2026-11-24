@@ -299,7 +299,7 @@ struct ProgressTests {
     }
 
     @Test func streakCountsFinishedDays() throws {
-        var p = Progress()
+        var p = Logbook()
         let today = try #require(cal.date(from: DateComponents(year: 2026, month: 11, day: 24, hour: 12)))
         for back in 1...3 {
             let d = try #require(cal.date(byAdding: .day, value: -back, to: today))
@@ -315,7 +315,7 @@ struct ProgressTests {
     }
 
     @Test func freePracticeIsThreeADay() {
-        var p = Progress()
+        var p = Logbook()
         #expect(p.practiceLeft(today: "2026-11-24") == 3)
         for _ in 0..<3 { p.usePractice(today: "2026-11-24") }
         #expect(p.practiceLeft(today: "2026-11-24") == 0)
@@ -328,7 +328,7 @@ struct ProgressTests {
 
     @Test func shareTextHasNoPlaceNames() {
         let a = answers("2026-11-24")
-        let text = Progress.shareText(key: "2026-11-24", answers: a, streak: 4)
+        let text = Logbook.shareText(key: "2026-11-24", answers: a, streak: 4)
         for x in a {
             #expect(!text.contains(x.question.city.en))
             #expect(!text.contains(x.question.city.ja))
@@ -337,11 +337,11 @@ struct ProgressTests {
     }
 
     @Test func progressSurvivesEncoding() throws {
-        var p = Progress()
+        var p = Logbook()
         p.days["2026-11-24"] = answers("2026-11-24")
         p.lore = [.clock, .crux]
         p.record(p.days["2026-11-24"]![0])
-        let back = try JSONDecoder().decode(Progress.self, from: JSONEncoder().encode(p))
+        let back = try JSONDecoder().decode(Logbook.self, from: JSONEncoder().encode(p))
         #expect(back == p)
     }
 }
