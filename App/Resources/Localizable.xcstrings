@@ -1,42 +1,1696 @@
 {
   "sourceLanguage": "ja",
   "strings": {
-    "はじめる": {
+    " ・%d 日連続": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Start"
+            "value": " · %d-day streak"
           }
         }
       }
     },
-    "リセット": {
+    "%@ km 縮んだ": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Reset"
+            "value": "%@ km closer"
           }
         }
       }
     },
-    "1 たす": {
+    "%d / %d 枚。答えのあとに、その空に当てはまる札が 1 枚ずつ集まる": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Add 1"
+            "value": "%d of %d. After each answer you earn the card that fits that sky."
           }
         }
       }
     },
-    "回数 %lld": {
+    "%d 問目": {
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Count %lld"
+            "value": "Question %d"
+          }
+        }
+      }
+    },
+    "%d 日": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d days"
+          }
+        }
+      }
+    },
+    "16 の都市を追加": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "16 more cities"
+          }
+        }
+      }
+    },
+    "30 日分": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last 30 days"
+          }
+        }
+      }
+    },
+    "App Store につながらない。電波のある所でもう一度開いてください": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can't reach the App Store. Try again when you're online."
+          }
+        }
+      }
+    },
+    "Pro で大陸ごとの苦手を見る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See weak continents with Pro"
+          }
+        }
+      }
+    },
+    "Pro にする %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Get Pro %@"
+          }
+        }
+      }
+    },
+    "Pro を使っています": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You have Pro"
+          }
+        }
+      }
+    },
+    "Pro を見る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See Pro"
+          }
+        }
+      }
+    },
+    "Pro（買い切り）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pro (one-time)"
+          }
+        }
+      }
+    },
+    "この夜空は、どこの空？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Whose night sky is this?"
+          }
+        }
+      }
+    },
+    "この空について": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About these skies"
+          }
+        }
+      }
+    },
+    "この空の読み方": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How to read this sky"
+          }
+        }
+      }
+    },
+    "この空は %1$d 月。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This sky was in %2$@."
+          }
+        }
+      }
+    },
+    "この空は、その土地の夜 10 時ごろ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This sky is about 10 p.m. local time"
+          }
+        }
+      }
+    },
+    "この空はいつもその土地の夜 10 時ごろ。グリニッジの時計との差 1 時間ごとに、経度が 15° ずれる。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This sky is always about 10 p.m. local time. Each hour of gap from the Greenwich clock is 15° of longitude."
+          }
+        }
+      }
+    },
+    "さそり座は夏の夜": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scorpius: Jun–Aug nights"
+          }
+        }
+      }
+    },
+    "しし座は春の夜": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leo: Mar–May nights"
+          }
+        }
+      }
+    },
+    "どこの空が苦手か、平均距離で分かる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See which skies you misread, by average distance"
+          }
+        }
+      }
+    },
+    "なし": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "off"
+          }
+        }
+      }
+    },
+    "ほしよみ天文台": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Star Compass"
+          }
+        }
+      }
+    },
+    "まだ見ていない空": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not yet seen"
+          }
+        }
+      }
+    },
+    "まだ記録がない": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No records yet"
+          }
+        }
+      }
+    },
+    "やめる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quit"
+          }
+        }
+      }
+    },
+    "アジア": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Asia"
+          }
+        }
+      }
+    },
+    "アフリカ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Africa"
+          }
+        }
+      }
+    },
+    "オセアニア": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oceania"
+          }
+        }
+      }
+    },
+    "オリオンは冬の夜": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orion: Dec–Feb nights"
+          }
+        }
+      }
+    },
+    "カノープスが昇っていた → 北緯 %d° は 37° より南。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Canopus was up → %d°N is south of 37°."
+          }
+        }
+      }
+    },
+    "カノープスは南の印": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Canopus means south"
+          }
+        }
+      }
+    },
+    "グリニッジの時計": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Greenwich clock"
+          }
+        }
+      }
+    },
+    "ヒント": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hints"
+          }
+        }
+      }
+    },
+    "ベガ・デネブ・アルタイルの大三角が南北の線にあるのは 8〜10 月。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vega, Deneb and Altair cross the north–south line in August to October."
+          }
+        }
+      }
+    },
+    "ペガススの四辺形が南北の線にあるのは 10〜12 月。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The Great Square of Pegasus crosses the north–south line in October to December."
+          }
+        }
+      }
+    },
+    "ヨーロッパ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Europe"
+          }
+        }
+      }
+    },
+    "一度買えば、ずっと。広告もサブスクもない": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buy once, keep forever. No ads, no subscription."
+          }
+        }
+      }
+    },
+    "世界のみんなと同じ 5 つの空。月の満ち欠けで結果を共有できる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Everyone gets the same five skies. Share your moons."
+          }
+        }
+      }
+    },
+    "今日": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TODAY"
+          }
+        }
+      }
+    },
+    "今日の 5 問": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today's five skies"
+          }
+        }
+      }
+    },
+    "今日の 5 問へ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Go to today's skies"
+          }
+        }
+      }
+    },
+    "今日の 5 問をはじめる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start today's five skies"
+          }
+        }
+      }
+    },
+    "今日の 5 問を答えると、距離と点がここにたまる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Answer today's five skies and your distances will gather here"
+          }
+        }
+      }
+    },
+    "今日の結果を見る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See today's result"
+          }
+        }
+      }
+    },
+    "今日は %@ 点。明日も新しい空が来る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today: %@ points. New skies tomorrow."
+          }
+        }
+      }
+    },
+    "何月の空？": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Which month?"
+          }
+        }
+      }
+    },
+    "全天で 2 番目に明るいカノープスは、北緯 37° より北では昇らない。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Canopus, the second-brightest star, never rises north of about 37°N."
+          }
+        }
+      }
+    },
+    "共有": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share"
+          }
+        }
+      }
+    },
+    "北アメリカ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "North America"
+          }
+        }
+      }
+    },
+    "北斗七星の柄の先まで一晩中沈まないのは、北緯 41° より北。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If the whole Big Dipper stays above the horizon, you are north of 41°N."
+          }
+        }
+      }
+    },
+    "北極星の高さ %d° → 北緯 約 %d°。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Polaris stood %d° high → about %d°N."
+          }
+        }
+      }
+    },
+    "北極星の高さは緯度": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Polaris height = latitude"
+          }
+        }
+      }
+    },
+    "北極星の高さは緯度。南十字が見えたら南の国。南北の線にある星座で月が分かる。時計の差は経度。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Polaris's height is your latitude. The Southern Cross means south. What sits on the meridian gives the month. The clock gap gives longitude."
+          }
+        }
+      }
+    },
+    "北極星は天の北極のすぐそば。地平線からの高さが、そのまま北緯になる。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Polaris sits by the north celestial pole. Its height above the horizon is your latitude."
+          }
+        }
+      }
+    },
+    "北緯": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "N"
+          }
+        }
+      }
+    },
+    "北緯 %d° なので、北斗七星は一晩中沈まない。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "At %d°N the Big Dipper never sets."
+          }
+        }
+      }
+    },
+    "南アメリカ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "South America"
+          }
+        }
+      }
+    },
+    "南十字が見えたら南": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See the Cross, go south"
+          }
+        }
+      }
+    },
+    "南十字が高さ %d° に見えた。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The Southern Cross stood %d° high."
+          }
+        }
+      }
+    },
+    "南十字で天の南極": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cross points to the pole"
+          }
+        }
+      }
+    },
+    "南十字の長い腕を 4.5 倍のばした所が天の南極。その高さが南緯。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extend the Cross's long arm 4.5 times to find the south pole. Its height is your southern latitude."
+          }
+        }
+      }
+    },
+    "南十字は北緯 27° より北ではほとんど見えない。見えたら南の国。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The Southern Cross hides north of about 27°N. Seeing it means you are far south."
+          }
+        }
+      }
+    },
+    "南米・アフリカ・極地（マクマード基地・ロングイェールビーン）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "South America, Africa and the poles (McMurdo, Longyearbyen)"
+          }
+        }
+      }
+    },
+    "南緯": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "S"
+          }
+        }
+      }
+    },
+    "四辺形は秋の夜": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Great Square: Oct–Dec"
+          }
+        }
+      }
+    },
+    "地球のどこかの、ある月の夜 10 時の全天。毎日 5 つ、世界のみんなと同じ空が届く。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A whole sky at 10 p.m., somewhere on Earth, in some month. Five new skies every day, the same for everyone."
+          }
+        }
+      }
+    },
+    "地球儀。回して、触れた所に答えのピンを刺す": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Globe. Spin it and tap to drop your pin."
+          }
+        }
+      }
+    },
+    "地球儀に刺して、月を選ぶ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pin the globe, pick the month"
+          }
+        }
+      }
+    },
+    "地球儀を回して、空を見た場所に触れる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spin the globe and tap where this sky was seen"
+          }
+        }
+      }
+    },
+    "場所": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Place"
+          }
+        }
+      }
+    },
+    "場所に触れて": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap a place"
+          }
+        }
+      }
+    },
+    "夜 10 時に南北の線にさそり座があるのは 6〜8 月。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scorpius crosses the north–south line at 10 p.m. in June to August."
+          }
+        }
+      }
+    },
+    "夜 10 時に南北の線にしし座があるのは 3〜5 月。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leo crosses the north–south line at 10 p.m. in March to May."
+          }
+        }
+      }
+    },
+    "夜 10 時に南北の線にオリオンがあるのは 12〜2 月。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orion crosses the north–south line at 10 p.m. in December to February."
+          }
+        }
+      }
+    },
+    "夜が明けた": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dawn breaks"
+          }
+        }
+      }
+    },
+    "夜明けの結果へ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See the dawn"
+          }
+        }
+      }
+    },
+    "夜空。指で回せる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Night sky. Drag to turn it."
+          }
+        }
+      }
+    },
+    "夜空から、地球のどこの何月かを当てる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Read a night sky. Guess where on Earth, and when."
+          }
+        }
+      }
+    },
+    "夜空の旅人": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Night Wanderer"
+          }
+        }
+      }
+    },
+    "大三角は夏の終わり": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Summer Triangle: Aug–Oct"
+          }
+        }
+      }
+    },
+    "大陸ごとの平均距離": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Average distance by continent"
+          }
+        }
+      }
+    },
+    "大陸ごとの記録": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continent records"
+          }
+        }
+      }
+    },
+    "天の南極の高さ %d° → 南緯 約 %d°。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The south pole stood %d° high → about %d°S."
+          }
+        }
+      }
+    },
+    "天の川": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Milky Way"
+          }
+        }
+      }
+    },
+    "天文台に入る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter the observatory"
+          }
+        }
+      }
+    },
+    "天文台の Pro": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Observatory Pro"
+          }
+        }
+      }
+    },
+    "天文台へ戻る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back to observatory"
+          }
+        }
+      }
+    },
+    "天文台長": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Observatory Director"
+          }
+        }
+      }
+    },
+    "季節": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Season"
+          }
+        }
+      }
+    },
+    "指で回せる。北極星・南十字・南北の線の星座を探そう": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drag to turn. Look for Polaris, the Southern Cross, and what sits on the meridian."
+          }
+        }
+      }
+    },
+    "振動": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Haptics"
+          }
+        }
+      }
+    },
+    "新しい札": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "NEW CARD"
+          }
+        }
+      }
+    },
+    "方角": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compass"
+          }
+        }
+      }
+    },
+    "明るい星 %d 個（公的な星表の値）と星座 %d 個、都市 %d か所を端末の中に持っている。位置情報もネットも使わない。記録はこの端末の中だけ。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d bright stars (from public catalogs), %d constellations and %d cities, all stored on this device. No location access, no network. Your records stay on this device."
+          }
+        }
+      }
+    },
+    "明日の 5 問は、0 時に新しい空になる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tomorrow's five skies arrive at midnight"
+          }
+        }
+      }
+    },
+    "星が、場所と季節を教える": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The stars tell place and season"
+          }
+        }
+      }
+    },
+    "星座の線": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lines"
+          }
+        }
+      }
+    },
+    "星読み": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Star Reader"
+          }
+        }
+      }
+    },
+    "時計の差は経度": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clock gap = longitude"
+          }
+        }
+      }
+    },
+    "時計は %@。夜 10 時との差から 東経 約 %d°（正解は %d°）。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clock read %@. The gap from 10 p.m. gives about %d°E (answer: %d°)."
+          }
+        }
+      }
+    },
+    "時計は %@。夜 10 時との差から 西経 約 %d°（正解は %d°）。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clock read %@. The gap from 10 p.m. gives about %d°W (answer: %d°)."
+          }
+        }
+      }
+    },
+    "最近 10 問の平均距離": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Average distance, last 10"
+          }
+        }
+      }
+    },
+    "最高": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Best"
+          }
+        }
+      }
+    },
+    "最高（毎日）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Best day"
+          }
+        }
+      }
+    },
+    "月を選んで": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pick a month"
+          }
+        }
+      }
+    },
+    "未挑戦": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New"
+          }
+        }
+      }
+    },
+    "東経": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "E"
+          }
+        }
+      }
+    },
+    "極地": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Polar"
+          }
+        }
+      }
+    },
+    "次の札で縮む": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next card will help"
+          }
+        }
+      }
+    },
+    "次の空へ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next sky"
+          }
+        }
+      }
+    },
+    "次へ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next"
+          }
+        }
+      }
+    },
+    "残り %d": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%d left"
+          }
+        }
+      }
+    },
+    "毎日の 5 問・ヒント・読み方の札・共有は、ずっと無料。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daily skies, hints, lore cards and sharing stay free forever."
+          }
+        }
+      }
+    },
+    "沈まない北斗七星": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The Dipper never sets"
+          }
+        }
+      }
+    },
+    "無制限": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlimited"
+          }
+        }
+      }
+    },
+    "無料は 1 日 3 回。読み方を覚えたいときに、何度でも": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Free is 3 a day. Practice as much as you like."
+          }
+        }
+      }
+    },
+    "空": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sky"
+          }
+        }
+      }
+    },
+    "答え": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Answer"
+          }
+        }
+      }
+    },
+    "答えた空": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skies"
+          }
+        }
+      }
+    },
+    "答える": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Answer"
+          }
+        }
+      }
+    },
+    "答えを置く": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Place answer"
+          }
+        }
+      }
+    },
+    "続きから（%d/5）": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue (%d/5)"
+          }
+        }
+      }
+    },
+    "練習": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Practice"
+          }
+        }
+      }
+    },
+    "練習を無制限": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlimited practice"
+          }
+        }
+      }
+    },
+    "練習を無制限・過去 30 日の空・難しい空・南米/アフリカ/極地の都市・大陸ごとの記録": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlimited practice, the last 30 days, hard skies, extra cities in South America, Africa and the poles, and continent records"
+          }
+        }
+      }
+    },
+    "練習中": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PRACTICE"
+          }
+        }
+      }
+    },
+    "航海士": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navigator"
+          }
+        }
+      }
+    },
+    "街あかりで暗い星が消え、星座の線も使えない": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "City glow hides faint stars, and lines are off"
+          }
+        }
+      }
+    },
+    "街あかり・線なし": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "City glow, no lines"
+          }
+        }
+      }
+    },
+    "西経": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "W"
+          }
+        }
+      }
+    },
+    "見習い観測手": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apprentice Observer"
+          }
+        }
+      }
+    },
+    "見逃した日の 5 問。終えた日は点が残る": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daily skies you missed. Finished days keep their score."
+          }
+        }
+      }
+    },
+    "見逃した日の 5 問を、あとから遊べる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play the daily skies you missed"
+          }
+        }
+      }
+    },
+    "観測の記録": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Records"
+          }
+        }
+      }
+    },
+    "記録": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Records"
+          }
+        }
+      }
+    },
+    "設定": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
+    },
+    "読み方の札": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lore cards"
+          }
+        }
+      }
+    },
+    "読み方を覚えるほど、当たる距離が縮む": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The more you can read, the closer you land"
+          }
+        }
+      }
+    },
+    "購入を復元": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore purchase"
+          }
+        }
+      }
+    },
+    "距離": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distance"
+          }
+        }
+      }
+    },
+    "近いほど点が高い（1 問 5,000 点）。答えのあとに「この空の読み方」の札が 1 枚ずつ集まる。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Closer means more points (5,000 per sky). After each answer, you collect a card on how to read that sky."
+          }
+        }
+      }
+    },
+    "連続": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Streak"
+          }
+        }
+      }
+    },
+    "過去 30 日の空": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The last 30 days"
+          }
+        }
+      }
+    },
+    "過去の問題": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Past skies"
+          }
+        }
+      }
+    },
+    "過去の空": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Past skies"
+          }
+        }
+      }
+    },
+    "閉じる": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close"
+          }
+        }
+      }
+    },
+    "難しい空": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hard skies"
+          }
+        }
+      }
+    },
+    "難しい空の練習": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HARD SKY"
+          }
+        }
+      }
+    },
+    "音": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sound"
+          }
+        }
+      }
+    },
+    "頭の上の星の赤緯 %d° → 緯度 約 %d°。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The overhead star's declination %d° → latitude about %d°."
+          }
+        }
+      }
+    },
+    "頭の上の星は緯度": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Overhead star = latitude"
+          }
+        }
+      }
+    },
+    "頭の真上を通る星の赤緯は、その土地の緯度と同じ。": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A star passing straight overhead has a declination equal to your latitude."
           }
         }
       }

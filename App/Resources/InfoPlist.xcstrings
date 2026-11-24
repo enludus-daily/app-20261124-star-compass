@@ -7,13 +7,13 @@
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "__APP_NAME__"
+            "value": "ほしよみ天文台"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "__APP_NAME__"
+            "value": "Star Compass"
           }
         }
       }
